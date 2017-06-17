@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.sprinunna.treasuresocial.Login"
+
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+
+    android:paddingTop="@dimen/login_vertical_margin"
+    android:paddingBottom="@dimen/login_vertical_margin"
+
+    android:background="@color/colorPrimaryDark">
+
+    <LinearLayout
+        android:id="@+id/inputfeilds"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:weightSum="1"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true">
+
+        <ImageView
+            android:layout_width="207dp"
+            android:layout_height="181dp"
+            android:src="@drawable/fingerprint"
+            android:layout_margin="5dp"/>
+        <TextView
+           style="@style/textView_style"
+            android:textAllCaps="true"
+            android:text="Treasure Social"
+            android:layout_margin="5dp"/>
+        <EditText
+            android:id="@+id/username_input"
+            android:hint="Username"
+            style="@style/editText_style" />
+        <EditText
+            android:id="@+id/password_input"
+            android:hint="Password"
+            style="@style/editText_style"
+            android:inputType="textPassword"
+             />
+        <Button
+            android:id="@+id/login_input"
+            android:text="Log In"
+            style="@style/button_style"
+            android:onClick="OnLogin"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Forgot your password?"
+            style="@style/textView_style"/>
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/skip_input"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text=">> skip >>"
+        android:textAlignment="center"
+        android:textColor="@color/colorPrimary"
+        android:layout_alignParentBottom="true"
+        android:onClick="Skip"
+        android:visibility="gone"/>
+    <RelativeLayout
+        android:id="@+id/loadingLayout"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:background="#9a000000"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true"
+        android:visibility="gone">
+        <RelativeLayout
+            android:layout_width="300dp"
+            android:layout_height="100dp"
+            android:layout_centerInParent="true"
+            android:background="#9aef7272"
+            android:padding="5dp">
+            <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_centerInParent="true"
+                android:background="#000000">
+                <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Loading..."
+                    android:textSize="30dp"
+                    android:textColor="#FFFFFFFF"
+                    android:textAlignment="center"/>
+                <ProgressBar
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_alignParentBottom="true"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginBottom="10dp"/>
+            </RelativeLayout>
+        </RelativeLayout>
+    </RelativeLayout>
+</RelativeLayout>
