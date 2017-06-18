@@ -26,6 +26,10 @@
         <activity
             android:name=".home"
             android:label="@string/title_activity_home"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".ftr_information"
+            android:label="@string/title_activity_ftr_information"
             android:theme="@style/AppTheme.NoActionBar"></activity>
     </application>
 
