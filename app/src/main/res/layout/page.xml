@@ -7,14 +7,17 @@
     android:layout_height="match_parent"
     tools:context="com.sprinunna.treasuresocial.ftr_information"
     android:background="@color/colorPrimaryDark">
-
-    <include layout="@layout/page" />
-    <android.support.design.widget.FloatingActionButton
-        android:id="@+id/fab"
+    <TextView
+        android:id="@+id/title"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_centerHorizontal="true"
-        android:layout_alignParentBottom="true"
-        android:layout_margin="@dimen/fab_margin"
-        app:srcCompat="@drawable/next" />
+        style="@style/page_title"
+        android:text="Welcome!" />
+    <TextView
+        android:id="@+id/body"
+        android:layout_width="match_parent"
+        android:layout_height="fill_parent"
+        style="@style/page_body"
+        android:text="this is just some test text"
+        android:layout_below="@+id/title"/>
 </RelativeLayout>
