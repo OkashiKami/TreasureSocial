@@ -41,7 +41,7 @@ public class ftr_information extends AppCompatActivity {
             }
         });
 
-        final String path = "welcome.txt";
+        final String path = "welcome.docx";
 
         ((TextView)findViewById(R.id.title)).setText("");
         ((TextView)findViewById(R.id.body)).setText("");
