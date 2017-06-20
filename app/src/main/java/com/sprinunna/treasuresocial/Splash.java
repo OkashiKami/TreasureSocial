@@ -2,6 +2,7 @@ package com.sprinunna.treasuresocial;
 
 import android.annotation.SuppressLint;
 import android.content.Intent;
+import android.support.design.widget.Snackbar;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -9,6 +10,11 @@ import android.os.Handler;
 import android.view.MotionEvent;
 import android.view.View;
 import android.widget.Toast;
+
+import com.sprinunna.treasuresocial.Utils.FileManager;
+import com.sprinunna.treasuresocial.Utils.QuoteBank;
+
+import java.util.List;
 
 /**
  * An example full-screen activity that shows and hides the system UI (i.e.
@@ -103,7 +109,13 @@ public class Splash extends AppCompatActivity {
         new Handler().postDelayed(new Runnable() {
             @Override
             public void run() {
-                startActivity(new Intent(Splash.this, ftr_information.class));
+                if(new FileManager(getBaseContext(), "FTR_Manager").CheckFTR()) {
+                    startActivity(new Intent(Splash.this, ftr_information.class));
+                }
+                else
+                {
+                    startActivity(new Intent(Splash.this, Login.class));
+                }
                 finish();
             }
         }, 5000);

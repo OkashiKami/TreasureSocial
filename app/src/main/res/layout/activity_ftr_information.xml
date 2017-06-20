@@ -8,7 +8,7 @@
     tools:context="com.sprinunna.treasuresocial.ftr_information"
     android:background="@color/colorPrimaryDark">
 
-    <include layout="@layout/page" />
+    <include android:id="@+id/pagelayout" layout="@layout/page" />
     <android.support.design.widget.FloatingActionButton
         android:id="@+id/fab"
         android:layout_width="wrap_content"
@@ -16,5 +16,5 @@
         android:layout_centerHorizontal="true"
         android:layout_alignParentBottom="true"
         android:layout_margin="@dimen/fab_margin"
-        app:srcCompat="@drawable/next" />
+        app:srcCompat="@drawable/more" />
 </RelativeLayout>
